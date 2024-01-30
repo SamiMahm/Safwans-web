@@ -1,0 +1,153 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>SN Garden Group</title>
+  </head>
+  <div class="container">
+  <nav>
+    <img class="logo" src="{% static 'imgs/sn-garden.png' %}" alt="">
+  <ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link active" href="#">link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#Services">Services</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#contact">Contact Information</a>
+    </li>
+  </ul>
+  </nav>
+  <body>
+
+
+
+    <div class="container">
+        <h1>Safwans Website</h1>
+        <h4 style="display: block; padding-left: 20px;">This is just some description about what we do and what<br> we have
+           to offer, perhaps theres more stuff about plants!<br>
+          Plants give us oxygen so we can breath
+          oxygen exists as a<br> molecule that is bonded to itself.</h4>
+          <a class="buttonA" href="#form">Contact us</a>
+        </div>
+
+
+
+    <div class="spacing"></div>
+
+    <h1 id="Services" style="display: block; padding: 20px;"><center>Our Services</center></h1>
+
+        <div class="cards-container">
+          <div class="card" style="width: 18rem;">
+            <img src="{% static 'imgs/garden.jpg' %}" class="card-img" alt="...">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+            <img src="{% static 'imgs/garden.jpg' %}" class="card-img" alt="...">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+            <img src="{% static 'imgs/garden.jpg' %}" class="card-img" alt="...">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+        
+        <footer id="footer" class="page-footer">
+          <div style="padding-top: 5px">
+            <hr/>
+            <h2 style="text-align: center; color: #000000;">Contact Us</h2>
+            <p style="text-align: center; text-justify: inter-word">
+              Message us for a free quote
+            </p>
+
+<div id="contact" class="contact-info">
+  <h2>Contact Information</h2>
+  <p>
+    <a href="tel:07944032701"><i class="fa fa-phone" style="font-size:25px; color:#00a000;"></i>  07944032701</a>
+    <br>
+    <a href="mailto: contact.sngardengroup@gmail.com"><i class="fa fa-envelope" style="font-size:25px; color: #00a000;"></i> Email Us</a>
+    <br>
+    <a href="https://www.instagram.com/sngardengroup/"><i class="fa fa-instagram" style="font-size:29px; color:#00a000"></i> Instagram Page</a>
+  </p>
+</div>
+
+            <!--FORM-->
+            <section class="form-section">
+              <form id="form" class="was-validated" method="post">
+                {% csrf_token %}
+                <div>
+                  <label for="Name"></label>
+                  <input
+                    name="Name"
+                    type="text"
+                    id="Name"
+                    placeholder="Name"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="Email"></label>
+                  <input
+                    type="text"
+                    name="Email"
+                    id="email"
+                    placeholder="Email"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="Subject"></label>
+                  <textarea
+                    rows="3"
+                    cols="30"
+                    name="Subject"
+                    id="detail"
+                    placeholder="Subject"
+                    required
+                  ></textarea>
+                </div>
+                <div>
+                  <button class="buttonForm">Submit</button>
+                </div>
+              </form>
+            </section>
+          </div>
+          <div style="text-align: center;">
+            &copy;2022 Designed and built by
+            <a href="https://samimahm.netlify.app/">Sami Mahmood</a>
+          </div>
+    
+          <div>
+            <hr/>
+          </div>
+          
+        </footer>
+      </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</div>
+</html>
